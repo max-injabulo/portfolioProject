@@ -1,0 +1,23 @@
+{
+    "items": [
+      {
+        "id": 0,
+        "description": "Pens, pencils, folders, construction paper",
+        "location": "Seattle, WA",
+        "submitterID": null
+      },
+      {
+        "id": 1,
+        "description": "Wood planks and construction materials",
+        "location": "New York, NY",
+        "submitterID": null
+      },
+      {
+        "id": 2,
+        "description": "Winter coats for toddlers",
+        "location": "Los Angeles, CA",
+        "submitterID": null
+      }
+    ]
+  }
+  
