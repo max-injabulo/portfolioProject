@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addItem, deleteItem } from './itemsSlice';
 import AvailableItemsList from './AvailableItemsList';
+import { Container, Row, Col, Button } from 'reactstrap';
 
 function App() {
   const [description, setDescription] = useState('');
@@ -26,15 +27,24 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>Available/Free Items</h1>
+    <div class="container" style={{ background: 'linear-gradient(135deg, #5156ae, #00ff00)' }}>
+
+      <div class="row">
+        <h1>Available/Free Items</h1>
+      </div>
+      <br />
+
       {items.length > 0 ? (
         items.map((item) => (
+          <div key={item.id}>
           <AvailableItemsList key={item.id} item={item} onDelete={() => handleDelete(item.id)} />
-        ))
+          <br />
+          </div>
+          ))
       ) : (
-        <p>No available items</p>
+        <p>No Donated Items to Display</p>
       )}
+        <h3>Add an item to donate:</h3>
 
       <form onSubmit={handleSubmit}>
         <input
